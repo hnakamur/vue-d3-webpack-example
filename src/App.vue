@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <chart :chart-data="chartData" :width="chartWidth" :bar-height="barHeight"></chart>
+    <bar-chart :chart-data="barChart.data" :width="barChart.width" :bar-height="barChart.barHeight"></bar-chart>
   </div>
 </template>
 
 <script>
-import Chart from './components/Chart'
+import BarChart from './components/BarChart'
 
 export default {
   name: 'app',
   components: {
-    Chart
+    BarChart
   },
   data () {
     return {
-      chartData: [4, 8, 15, 16, 23, 42],
-      chartWidth: 420,
-      barHeight: 20
+      barChart: {
+        data: [4, 8, 15, 16, 23, 42],
+        width: 420,
+        barHeight: 20
+      }
     }
   }
 }
