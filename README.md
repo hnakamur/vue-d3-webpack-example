@@ -16,3 +16,7 @@ npm run build
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Live demo
+
+[live demo](https://hnakamur.github.io/vue-d3-webpack-example/dist/)
