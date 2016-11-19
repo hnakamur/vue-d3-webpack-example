@@ -52,14 +52,16 @@ export default BaseChart.extend({
 })
 </script>
 
-<style>
-.chart rect {
-  fill: steelblue;
-}
+<style lang="scss">
+.chart {
+  rect {
+    fill: steelblue;
+  }
 
-.chart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
+  text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+  }
 }
 </style>
