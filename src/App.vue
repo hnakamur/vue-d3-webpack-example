@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <chart></chart>
+    <chart v-bind:chart-data="chartData"></chart>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'app',
   components: {
     Chart
+  },
+  data () {
+    return {
+      chartData: [4, 8, 15, 16, 23, 42]
+    }
   }
 }
 </script>

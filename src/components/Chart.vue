@@ -7,11 +7,7 @@ import * as d3 from 'd3'
 
 export default {
   name: 'chart',
-  data () {
-    return {
-      data: [4, 8, 15, 16, 23, 42]
-    }
-  },
+  props: ['chartData'],
   methods: {
     renderChart: function (data) {
       // This code is based on https://bost.ocks.org/mike/bar/2/
@@ -48,10 +44,10 @@ export default {
     }
   },
   mounted: function () {
-    this.renderChart(this.$data.data)
+    this.renderChart(this.chartData)
   },
   watch: {
-    data: function (val) {
+    chartData: function (val) {
       this.renderChart(val)
     }
   }
