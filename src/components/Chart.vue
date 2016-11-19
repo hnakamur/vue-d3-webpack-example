@@ -3,11 +3,12 @@
 </template>
 
 <script>
+import BaseChart from './BaseChart'
 import * as d3 from 'd3'
 
-export default {
+export default BaseChart.extend({
   name: 'chart',
-  props: ['chartData', 'width', 'barHeight'],
+  props: ['width', 'barHeight'],
   methods: {
     renderChart () {
       // This code is based on https://bost.ocks.org/mike/bar/2/
@@ -44,26 +45,23 @@ export default {
           .text(function (d) { return d })
     }
   },
-  mounted () {
-    this.renderChart()
-  },
   watch: {
-    chartData: 'renderChart',
     width: 'renderChart',
     barHeight: 'renderChart'
   }
-}
+})
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-.chart rect {
-  fill: steelblue;
-}
+<style lang="scss">
+.chart {
+  rect {
+    fill: steelblue;
+  }
 
-.chart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
+  text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+  }
 }
 </style>
