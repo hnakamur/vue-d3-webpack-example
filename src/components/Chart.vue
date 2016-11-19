@@ -9,7 +9,7 @@ export default {
   name: 'chart',
   props: ['chartData', 'width', 'barHeight'],
   methods: {
-    renderChart: function () {
+    renderChart () {
       // This code is based on https://bost.ocks.org/mike/bar/2/
 
       var data = this.chartData
@@ -44,19 +44,13 @@ export default {
           .text(function (d) { return d })
     }
   },
-  mounted: function () {
+  mounted () {
     this.renderChart()
   },
   watch: {
-    chartData: function (val) {
-      this.renderChart()
-    },
-    width: function (val) {
-      this.renderChart()
-    },
-    barHeight: function (val) {
-      this.renderChart()
-    }
+    chartData: 'renderChart',
+    width: 'renderChart',
+    barHeight: 'renderChart'
   }
 }
 </script>
