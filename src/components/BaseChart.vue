@@ -14,6 +14,9 @@ export default Vue.extend({
   },
   mounted () {
     this.renderChart()
+  },
+  watch: {
+    chartData: 'renderChart'
   }
 })
 </script>

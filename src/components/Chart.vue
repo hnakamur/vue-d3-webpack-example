@@ -42,7 +42,6 @@ export default BaseChart.extend({
     }
   },
   watch: {
-    chartData: 'renderChart',
     width: 'renderChart',
     barHeight: 'renderChart'
   }
