@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <chart v-bind:chart-data="chartData"></chart>
+    <chart :chart-data="chartData" :width="chartWidth" :bar-height="barHeight"></chart>
   </div>
 </template>
 
@@ -14,7 +14,9 @@ export default {
   },
   data () {
     return {
-      chartData: [4, 8, 15, 16, 23, 42]
+      chartData: [4, 8, 15, 16, 23, 42],
+      chartWidth: 420,
+      barHeight: 20
     }
   }
 }
