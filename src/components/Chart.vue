@@ -1,13 +1,10 @@
-<template>
-  <svg class="chart"></svg>
-</template>
-
 <script>
+import BaseChart from './BaseChart'
 import * as d3 from 'd3'
 
-export default {
+export default BaseChart.extend({
   name: 'chart',
-  props: ['chartData', 'width', 'barHeight'],
+  props: ['width', 'barHeight'],
   methods: {
     renderChart () {
       // This code is based on https://bost.ocks.org/mike/bar/2/
@@ -44,15 +41,12 @@ export default {
           .text(function (d) { return d })
     }
   },
-  mounted () {
-    this.renderChart()
-  },
   watch: {
     chartData: 'renderChart',
     width: 'renderChart',
     barHeight: 'renderChart'
   }
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
