@@ -9,7 +9,7 @@ export default Vue.extend({
   props: ['chartData'],
   methods: {
     renderChart () {
-      // Please override this method in subclasses.
+      throw new Error('Please implement renderChart method in subclass of BaseChart.')
     }
   },
   mounted () {
