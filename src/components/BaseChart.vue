@@ -1,5 +1,5 @@
 <template>
-  <svg class="chart"></svg>
+  <svg></svg>
 </template>
 
 <script>
@@ -20,6 +20,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style>
-</style>

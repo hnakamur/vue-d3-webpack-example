@@ -1,3 +1,7 @@
+<template>
+  <svg class="chart"></svg>
+</template>
+
 <script>
 import BaseChart from './BaseChart'
 import * as d3 from 'd3'
@@ -48,7 +52,6 @@ export default BaseChart.extend({
 })
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .chart rect {
   fill: steelblue;
