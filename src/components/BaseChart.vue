@@ -16,7 +16,10 @@ export default Vue.extend({
     this.renderChart()
   },
   watch: {
-    chartData: 'renderChart'
+    chartData: {
+      handler: 'renderChart',
+      deep: true
+    }
   }
 })
 </script>
