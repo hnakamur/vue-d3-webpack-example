@@ -1,5 +1,5 @@
 <template>
-  <svg class="chart"></svg>
+  <svg class="bar-chart"></svg>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ import BaseChart from './BaseChart'
 import * as d3 from 'd3'
 
 export default BaseChart.extend({
-  name: 'chart',
+  name: 'bar-chart',
   props: ['width', 'barHeight'],
   methods: {
     renderChart () {
@@ -53,7 +53,7 @@ export default BaseChart.extend({
 </script>
 
 <style lang="scss">
-.chart {
+.bar-chart {
   rect {
     fill: steelblue;
   }
